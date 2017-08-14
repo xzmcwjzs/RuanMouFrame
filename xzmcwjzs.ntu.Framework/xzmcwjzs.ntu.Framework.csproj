@@ -40,7 +40,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Caching\CacheManager.cs" />
+    <Compile Include="Caching\HashtableCache.cs" />
+    <Compile Include="Caching\ICache.cs" />
+    <Compile Include="Caching\MemoryCache.cs" />
+    <Compile Include="Encrypt\DesEncrypt.cs" />
+    <Compile Include="Encrypt\MD5Encrypt.cs" />
+    <Compile Include="Encrypt\RsaEncrypt.cs" />
+    <Compile Include="Excel\ExcelHelper.cs" />
+    <Compile Include="Extension\JsonHelper.cs" />
+    <Compile Include="Extension\RemarkAttribute.cs" />
+    <Compile Include="Extension\xHelper.cs" />
+    <Compile Include="Extension\XmlHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="AOP\" />
+    <Folder Include="Log\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

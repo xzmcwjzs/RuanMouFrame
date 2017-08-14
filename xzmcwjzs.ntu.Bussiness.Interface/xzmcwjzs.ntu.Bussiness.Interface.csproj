@@ -40,7 +40,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IBaseService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="IUserCategoryService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\xzmcwjzs.ntu.EF.Model\xzmcwjzs.ntu.EF.Model.csproj">
+      <Project>{348caff3-8550-4d19-abba-2e9ea0b453fa}</Project>
+      <Name>xzmcwjzs.ntu.EF.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

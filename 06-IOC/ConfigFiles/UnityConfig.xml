@@ -1,0 +1,17 @@
+﻿<configuration>
+  <configSections>
+    <section name="unity" type="Microsoft.Practices.Unity.Configuration.UnityConfigurationSection, Microsoft.Practices.Unity.Configuration"/>
+  </configSections>
+  <unity>
+    <containers>
+      <container name="xzmcwjzsContainer">
+        <!--前面命名空间.        后面是程序集-->
+        <register type="System.Data.Entity.DbContext, EntityFramework" mapTo="xzmcwjzs.ntu.EF.Model.Entities.JDContext, xzmcwjzs.ntu.EF.Model"/>
+        <register type="xzmcwjzs.ntu.Bussiness.Interface.IUserCategoryService,xzmcwjzs.ntu.Bussiness.Interface" mapTo="xzmcwjzs.ntu.Bussiness.Service.UserCategoryService, xzmcwjzs.ntu.Bussiness.Service"/>
+        <!--泛型注册-->
+        <register type="xzmcwjzs.ntu.Bussiness.Interface.IBaseService`1,xzmcwjzs.ntu.Bussiness.Interface" mapTo="xzmcwjzs.ntu.Bussiness.Service.BaseService`1, xzmcwjzs.ntu.Bussiness.Service"/>
+      </container>
+
+    </containers>
+  </unity>
+</configuration>

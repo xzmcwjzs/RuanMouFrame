@@ -14,7 +14,7 @@ namespace Ruanmou.Framework.Encrypt
     public class DesEncrypt
     {
         //8位长度
-        private static string KEY = "ruanmou1";
+        private static string KEY = "xzmcwjzs";
         private static byte[] key = ASCIIEncoding.ASCII.GetBytes(KEY.Substring(0, 8));
         private static byte[] iv = ASCIIEncoding.ASCII.GetBytes(KEY.Insert(0, "w").Substring(0, 8));
 

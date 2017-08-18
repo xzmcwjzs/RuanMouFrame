@@ -1,4 +1,6 @@
-﻿using System;
+﻿using _07_Attribute_AOP_.AOP;
+using _07_Attribute_AOP_.Utility;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,8 +8,10 @@ using System.Threading.Tasks;
 
 namespace _07_Attribute_AOP_
 {
+    
     class Program
     {
+        private static Logger logger = Logger.CreateLogger(typeof(Program));
         static void Main(string[] args)
         {
             Student student = new Student()
@@ -32,8 +36,10 @@ namespace _07_Attribute_AOP_
             Console.WriteLine("=========================");
             AttributeInvoke.Show<FreeStudent>(free);
             Console.WriteLine("=========================");
+            UnityAOP.Show();
 
-
+           //logger.Error("测试异常", null);
+              
             Console.ReadKey();
         }
     }

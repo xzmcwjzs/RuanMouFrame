@@ -49,6 +49,7 @@
     <Compile Include="BaseService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserCategoryService.cs" />
+    <Compile Include="UserService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\xzmcwjzs.ntu.Bussiness.Interface\xzmcwjzs.ntu.Bussiness.Interface.csproj">

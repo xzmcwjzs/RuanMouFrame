@@ -54,6 +54,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "00-多线程与线程池", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "00-异步编程", "00-异步编程\00-异步编程.csproj", "{BB5AFC3E-69C4-46B6-AEAC-CF4423FFA134}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RemoteService", "RemoteService", "{5DA3697C-A482-49C9-9BB2-5B864942D04F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

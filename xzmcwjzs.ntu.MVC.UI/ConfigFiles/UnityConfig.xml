@@ -1,0 +1,28 @@
+﻿<configuration>
+  <configSections>
+    <section name="unity" type="Microsoft.Practices.Unity.Configuration.UnityConfigurationSection, Microsoft.Practices.Unity.Configuration"/>
+  </configSections>
+  <unity>
+    <sectionExtension type ="Microsoft.Practices.Unity.InterceptionExtension.Configuration.InterceptionConfigurationExtension,Microsoft.Practices.Unity.Interception.Configuration "></sectionExtension >
+    <containers>
+      <container name="xzmcwjzsContainer">
+        <extension type= "Interception"/>
+        <!--前面命名空间.        后面是程序集-->
+        <register type="System.Data.Entity.DbContext, EntityFramework" mapTo="xzmcwjzs.ntu.EF.Model.Entities.JDContext, xzmcwjzs.ntu.EF.Model"/>
+        <register type="xzmcwjzs.ntu.Bussiness.Interface.IUserCategoryService,xzmcwjzs.ntu.Bussiness.Interface" mapTo="xzmcwjzs.ntu.Bussiness.Service.UserCategoryService, xzmcwjzs.ntu.Bussiness.Service"/>
+        <register type="xzmcwjzs.ntu.Bussiness.Interface.IUserService,xzmcwjzs.ntu.Bussiness.Interface" mapTo="xzmcwjzs.ntu.Bussiness.Service.UserService, xzmcwjzs.ntu.Bussiness.Service">
+          <interceptor type ="InterfaceInterceptor"/>
+          <policyInjection/>
+          <!--配置特性拦截-->
+          <interceptionBehavior type="xzmcwjzs.ntu.Framework.AOP.Behavior.CachingBehavior, xzmcwjzs.ntu.Framework"/>
+          <!--为接口配置拦截-->
+          <interceptionBehavior type="xzmcwjzs.ntu.Framework.AOP.Behavior.ExceptionLoggingBehavior, xzmcwjzs.ntu.Framework"/>
+          <interceptionBehavior type="xzmcwjzs.ntu.Framework.AOP.Behavior.MonitorBehavior, xzmcwjzs.ntu.Framework"/>
+        </register>
+        <!--泛型注册-->
+        <register type="xzmcwjzs.ntu.Bussiness.Interface.IBaseService`1,xzmcwjzs.ntu.Bussiness.Interface" mapTo="xzmcwjzs.ntu.Bussiness.Service.BaseService`1, xzmcwjzs.ntu.Bussiness.Service"/>
+      </container>
+
+    </containers>
+  </unity>
+</configuration>

@@ -129,6 +129,8 @@ namespace _00_多线程与线程池
             #endregion
 
             #region 线程池
+            /*
+
             // 新建ManualResetEvent对象并且初始化为无信号状态
             ManualResetEvent eventX = new ManualResetEvent(false);
             ThreadPool.SetMaxThreads(3, 3);
@@ -143,8 +145,10 @@ namespace _00_多线程与线程池
             Console.WriteLine("断点测试");
             Thread.Sleep(10000);
             Console.WriteLine("运行结束");
-             
+                */
             #endregion
+
+
 
             Console.ReadKey();
         }
@@ -179,7 +183,7 @@ namespace _00_多线程与线程池
                 }
             }
         }
-
+     
 
     }
 }

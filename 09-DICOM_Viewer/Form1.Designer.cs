@@ -31,14 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripOpen = new System.Windows.Forms.ToolStripButton();
-            this.toolStripClose = new System.Windows.Forms.ToolStripButton();
-            this.listViewDICOM = new System.Windows.Forms.ListView();
-            this.GroupTag = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ElementTag = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Value = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.pictureBoxDICOM = new System.Windows.Forms.PictureBox();
+            this.toolStripImgOrTag = new System.Windows.Forms.ToolStripButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.toolStripSave = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDICOM)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -46,7 +44,8 @@
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripOpen,
-            this.toolStripClose});
+            this.toolStripImgOrTag,
+            this.toolStripSave});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(825, 27);
@@ -64,64 +63,60 @@
             this.toolStripOpen.Text = "打开DICOM图像";
             this.toolStripOpen.Click += new System.EventHandler(this.toolStripOpen_Click);
             // 
-            // toolStripClose
+            // toolStripImgOrTag
             // 
-            this.toolStripClose.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripClose.Image = ((System.Drawing.Image)(resources.GetObject("toolStripClose.Image")));
-            this.toolStripClose.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripClose.Name = "toolStripClose";
-            this.toolStripClose.Size = new System.Drawing.Size(43, 24);
-            this.toolStripClose.Text = "清空";
+            this.toolStripImgOrTag.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripImgOrTag.Image = ((System.Drawing.Image)(resources.GetObject("toolStripImgOrTag.Image")));
+            this.toolStripImgOrTag.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripImgOrTag.Name = "toolStripImgOrTag";
+            this.toolStripImgOrTag.Size = new System.Drawing.Size(88, 24);
+            this.toolStripImgOrTag.Text = "切换到影像";
             // 
-            // listViewDICOM
+            // pictureBox1
             // 
-            this.listViewDICOM.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.GroupTag,
-            this.ElementTag,
-            this.Value});
-            this.listViewDICOM.Location = new System.Drawing.Point(12, 30);
-            this.listViewDICOM.Name = "listViewDICOM";
-            this.listViewDICOM.Size = new System.Drawing.Size(289, 600);
-            this.listViewDICOM.TabIndex = 1;
-            this.listViewDICOM.UseCompatibleStateImageBehavior = false;
-            this.listViewDICOM.View = System.Windows.Forms.View.Details;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 27);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(825, 610);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
-            // GroupTag
+            // textBox1
             // 
-            this.GroupTag.Text = "GroupTag";
-            this.GroupTag.Width = 105;
+            this.textBox1.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
+            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox1.Location = new System.Drawing.Point(0, 27);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox1.Size = new System.Drawing.Size(825, 610);
+            this.textBox1.TabIndex = 1;
+            this.textBox1.WordWrap = false;
             // 
-            // ElementTag
+            // toolStripSave
             // 
-            this.ElementTag.Text = "ElementTag";
-            this.ElementTag.Width = 131;
-            // 
-            // Value
-            // 
-            this.Value.Text = "Value";
-            this.Value.Width = 93;
-            // 
-            // pictureBoxDICOM
-            // 
-            this.pictureBoxDICOM.Location = new System.Drawing.Point(382, 30);
-            this.pictureBoxDICOM.Name = "pictureBoxDICOM";
-            this.pictureBoxDICOM.Size = new System.Drawing.Size(417, 595);
-            this.pictureBoxDICOM.TabIndex = 2;
-            this.pictureBoxDICOM.TabStop = false;
+            this.toolStripSave.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripSave.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSave.Image")));
+            this.toolStripSave.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripSave.Name = "toolStripSave";
+            this.toolStripSave.Size = new System.Drawing.Size(58, 24);
+            this.toolStripSave.Text = "另存为";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(825, 637);
-            this.Controls.Add(this.pictureBoxDICOM);
-            this.Controls.Add(this.listViewDICOM);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.toolStrip1);
             this.Name = "Form1";
             this.Text = "DICOM Viewer";
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDICOM)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -131,12 +126,10 @@
 
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton toolStripOpen;
-        private System.Windows.Forms.ToolStripButton toolStripClose;
-        private System.Windows.Forms.ListView listViewDICOM;
-        private System.Windows.Forms.ColumnHeader GroupTag;
-        private System.Windows.Forms.ColumnHeader ElementTag;
-        private System.Windows.Forms.ColumnHeader Value;
-        private System.Windows.Forms.PictureBox pictureBoxDICOM;
+        private System.Windows.Forms.ToolStripButton toolStripImgOrTag;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ToolStripButton toolStripSave;
     }
 }
 

@@ -10,6 +10,8 @@ namespace _01_单例模式
     {
         static void Main(string[] args)
         {
+            //SingleThread_Singleton a = new SingleThread_Singleton();
+            
         }
 
         //单线程Singleton

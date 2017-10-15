@@ -30,6 +30,7 @@ namespace _02_Crawler_爬虫_
                     Console.WriteLine("Url为空,Name={0} Level={1} Url={2}", category.Name, category.CategoryLevel, category.Url);
                     return;
                 }
+                //开源项目Html Agility Pack实现快速解析Html   HAP
                 string html = HttpHelper.DownloadCommodity(category.Url);//下载html
                 HtmlDocument doc = new HtmlDocument();
                 doc.LoadHtml(html);//加载html

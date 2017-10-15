@@ -25,6 +25,10 @@ namespace 线程同步
 //所以在实际的设计中还是要尽量避免使用线程同步，因此我们要避免使用一些共享数据，例如静态字段。
     class Program
     {
+        public static List<int> lists = new List<int>();
+
+        // 创建一个对象
+        public static ReaderWriterLock readerwritelock = new ReaderWriterLock();
         // 比较使用锁和不使用锁锁消耗的时间
         // 通过时间来说明使用锁性能的影响
         static void Main(string[] args)
@@ -52,9 +56,74 @@ namespace 线程同步
             //Console.WriteLine("Use the all time is :{0} ms", sw.ElapsedMilliseconds);
             //Console.Read();
 
+            //for (int i = 0; i < 50; i++)
+            //{
+            //    Thread testthread = new Thread(Add);
+            //    testthread.Start();
+            //}
+
+            //Console.Read();
 
 
+            //如果我们需要对一个共享资源执行多次读取时，然而用前面所讲的类实现的同步锁都只允许一个线程允许，所有线程将阻塞，但是这种情况下肯本没必要堵塞其他线程， 应该让它们并发的执行，因为我们此时只是进行读取操作，此时通过ReaderWriterLock类可以很好的实现读取并行。
+            //创建一个线程读取数据
+            Thread t1 = new Thread(Write);
+            t1.Start();
+            // 创建10个线程读取数据
+            for (int i = 0; i < 10; i++)
+            {
+                Thread t = new Thread(Read);
+                t.Start();
+            }
 
+            Console.Read();
+
+        }
+        public static void Write()
+        {
+            // 获取写入锁，以10毫秒为超时。
+            readerwritelock.AcquireWriterLock(10);
+            Random ran = new Random();
+            int count = ran.Next(1, 10);
+            lists.Add(count);
+            Console.WriteLine("Write the data is:" + count);
+            // 释放写入锁
+            readerwritelock.ReleaseWriterLock();
+        }
+
+        // 读取方法
+        public static void Read()
+        {
+            // 获取读取锁
+            readerwritelock.AcquireReaderLock(10);
+
+            foreach (int li in lists)
+            {
+                // 输出读取的数据
+                Console.WriteLine(li);
+            }
+
+            // 释放读取锁
+            readerwritelock.ReleaseReaderLock();
+        }
+
+        // 共享资源
+        public static int number = 1;
+        private static object lockobj = new object();//锁的对象应该是引用类型
+        public static void Add()
+        {
+            //Thread.Sleep(1000);
+            ////Console.WriteLine("the current value of number is:{0}", ++number);
+            //Console.WriteLine("the current value of number is:{0}", Interlocked.Increment(ref number));
+
+            Thread.Sleep(1000);
+            //获得排他锁
+            Monitor.Enter(lockobj);
+
+            Console.WriteLine("the current value of number is:{0}", number++);
+
+            // 释放指定对象上的排他锁。
+            Monitor.Exit(lockobj);
         }
     }
 }

@@ -70,7 +70,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "数据结构", "数据结�
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03线程池中的IO线程", "线程池中的IO线程\03线程池中的IO线程.csproj", "{6BE7A510-7EFA-4E87-98FF-40069BD4959C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "线程同步", "线程同步\线程同步.csproj", "{B5079ED6-FBD1-45B1-826B-3E9A4CA862F1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04线程同步", "线程同步\04线程同步.csproj", "{B5079ED6-FBD1-45B1-826B-3E9A4CA862F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05线程同步-事件构造", "线程同步-事件构造\05线程同步-事件构造.csproj", "{58A04A3D-73FA-48EC-81A8-D685BB257BF8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "线程同步-信号量和互斥体", "线程同步-信号量和互斥体\线程同步-信号量和互斥体.csproj", "{64808C12-C9FD-4AE6-A1AA-6E097D9C9BEE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -190,6 +194,14 @@ Global
 		{B5079ED6-FBD1-45B1-826B-3E9A4CA862F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B5079ED6-FBD1-45B1-826B-3E9A4CA862F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B5079ED6-FBD1-45B1-826B-3E9A4CA862F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58A04A3D-73FA-48EC-81A8-D685BB257BF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58A04A3D-73FA-48EC-81A8-D685BB257BF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58A04A3D-73FA-48EC-81A8-D685BB257BF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58A04A3D-73FA-48EC-81A8-D685BB257BF8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64808C12-C9FD-4AE6-A1AA-6E097D9C9BEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64808C12-C9FD-4AE6-A1AA-6E097D9C9BEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64808C12-C9FD-4AE6-A1AA-6E097D9C9BEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64808C12-C9FD-4AE6-A1AA-6E097D9C9BEE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -221,5 +233,7 @@ Global
 		{A817C05A-436B-4E61-9564-6481AF3CC4EC} = {62B98B3F-634C-4AF3-B03F-97F13FC478BC}
 		{6BE7A510-7EFA-4E87-98FF-40069BD4959C} = {5F99BC1A-F203-4752-969C-B3A767CFBF74}
 		{B5079ED6-FBD1-45B1-826B-3E9A4CA862F1} = {5F99BC1A-F203-4752-969C-B3A767CFBF74}
+		{58A04A3D-73FA-48EC-81A8-D685BB257BF8} = {5F99BC1A-F203-4752-969C-B3A767CFBF74}
+		{64808C12-C9FD-4AE6-A1AA-6E097D9C9BEE} = {5F99BC1A-F203-4752-969C-B3A767CFBF74}
 	EndGlobalSection
 EndGlobal

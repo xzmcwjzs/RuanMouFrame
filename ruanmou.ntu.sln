@@ -88,6 +88,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10-IEnumerable", "10-IEnume
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11-IQueryable", "11-IQueryable\11-IQueryable.csproj", "{BFFA814B-FBA4-4883-B766-96DCB908690A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MVC Pipeline", "MVC Pipeline", "{A2C82C58-B454-495A-B652-9E0E01F08412}"
+	ProjectSection(SolutionItems) = preProject
+		C:\Users\wangjie\AppData\Local\Temp\MVC生命周期图.png = C:\Users\wangjie\AppData\Local\Temp\MVC生命周期图.png
+		C:\Users\wangjie\AppData\Local\Temp\Pipeline.png = C:\Users\wangjie\AppData\Local\Temp\Pipeline.png
+		C:\Users\wangjie\Desktop\Pipeline.txt = C:\Users\wangjie\Desktop\Pipeline.txt
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -277,5 +284,6 @@ Global
 		{7530604A-36F1-4951-BE55-EFF1A416427F} = {A817C05A-436B-4E61-9564-6481AF3CC4EC}
 		{1F4B6F0E-F1EC-4EDC-89BF-B06CB8F46567} = {62B98B3F-634C-4AF3-B03F-97F13FC478BC}
 		{BFFA814B-FBA4-4883-B766-96DCB908690A} = {62B98B3F-634C-4AF3-B03F-97F13FC478BC}
+		{A2C82C58-B454-495A-B652-9E0E01F08412} = {62B98B3F-634C-4AF3-B03F-97F13FC478BC}
 	EndGlobalSection
 EndGlobal
